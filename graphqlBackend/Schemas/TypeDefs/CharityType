@@ -1,0 +1,14 @@
+const  {graphql, GraphQLObjectType, GraphQLSchema, GraphQLInt, GraphQLString} = require("graphql");
+
+const CharityType = new GraphQLObjectType({
+    name: "Charity",
+    fields: ()=> ({
+        id: { type: GraphQLInt},
+        charityName: { type: GraphQLString},
+        phone: { type: GraphQLString},
+        email: { type: GraphQLString},
+        address: { type: GraphQLString},
+    })
+})
+
+module.exports = CharityType
